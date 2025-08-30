@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My First HTML & CSS Project | Tech Blog</title>
+  <meta name="description" content="How I built my first responsive portfolio using HTML and CSS: file structure, layout, and lessons learned."/>
+  
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+
+  <!-- Site Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Single Tech Post -->
+  <main id="single-post">
+    <article>
+      <h1>My First HTML &amp; CSS Project: What I Built and What I Learned</h1>
+      <p class="date">August 22, 2025 | Category: Tech</p>
+
+      <p>
+        I created a simple, responsive portfolio using plain HTML and CSS. The goal was to
+        learn clean structure, mobile-first design, and basic components like a header,
+        project cards, a blog section, and a contact form.
+      </p>
+
+      <h2>Tools I Used</h2>
+      <ul>
+        <li>VS Code (with Live Server)</li>
+        <li>A single <code>style.css</code> for global styles</li>
+        <li>Semantic HTML elements (<code>header</code>, <code>section</code>, <code>main</code>, <code>footer</code>)</li>
+      </ul>
+
+      <h2>Basic File Structure</h2>
+      <pre><code>.
+├── index.html
+├── blog.html
+├── post1.html
+├── post2.html   &lt;-- this page
+├── style.css
+└── image/
+    ├── ILLAH.jpg
+    ├── project1.jpg
+    └── project2.jpg
+</code></pre>
+
+      <h2>Key Layout Pattern (Card + Grid)</h2>
+      <p>Project and blog cards use a simple grid so they adapt to screen size.</p>
+      <pre><code>/* Grid shell */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,.1);
+  padding: 20px;
+}</code></pre>
+
+      <h2>Mobile-First Tip</h2>
+      <p>
+        Start with a single-column layout, then enhance with media queries:
+      </p>
+      <pre><code>@media (min-width: 768px) {
+  .nav { display: flex; justify-content: center; }
+  .container { grid-template-columns: repeat(3, 1fr); }
+}</code></pre>
+
+      <h2>What I Learned</h2>
+      <ul>
+        <li>Keep styles modular: sections get their own blocks in <code>style.css</code>.</li>
+        <li>Use IDs for section anchors (e.g., <code>#projects</code>, <code>#contact</code>).</li>
+        <li>Test on mobile sizes early, not at the end.</li>
+      </ul>
+
+      <p>
+        Next steps: add more pages (like this post), improve accessibility (labels, contrast),
+        and eventually introduce a lightweight CSS framework or utility classes.
+      </p>
+    </article>
+
+    <!-- Post navigation (adjust targets as you add posts) -->
+    <div class="post-navigation">
+      <a href="post1.html" class="nav-btn">← Previous Post</a>
+      <a href="blog.html" class="nav-btn">Back to Blog</a>
+      <a href="post3.html" class="nav-btn">Next Post →</a>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer>
+    <p>&copy; 2025 Hempstone Illah. Built with ❤️ in Nairobi.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a> |
+      <a href="blog.html">Blog</a> |
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>
