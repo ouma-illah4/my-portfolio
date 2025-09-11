@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project 2 - Prayer Request App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="project1.html">Project 1</a></li>
+      <li><a href="project2.html">Project 2</a></li>
+      <li><a href="project3.html">Project 3</a></li>
+      <li><a href="blog/blog.html">Blog</a></li>
+      <li><a href="ebooks/ebook.html">Ebooks</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>Project 2: Prayer Request App</h1>
+    <p>A simple faith-based project where visitors can submit prayer requests and view them instantly.</p>
+  </header>
+
+  <main>
+    <!-- Prayer Request App -->
+    <div class="prayer-box">
+      <h2>Submit a Prayer Request</h2>
+      <form id="prayer-form">
+        <input type="text" id="prayer-input" placeholder="Write your prayer request..." required>
+        <button type="submit">Add Prayer</button>
+      </form>
+
+      <h3>Prayer List</h3>
+      <ul id="prayer-list">
+        <!-- Requests will appear here -->
+      </ul>
+    </div>
+
+    <!-- Project Details -->
+    <section class="project-detail">
+      <h2>About this project</h2>
+      <p>
+        Project 2 is a prayer request app where users can type in their prayer needs,
+        and they will appear in a list. The requests are stored in the browser’s
+        <strong>localStorage</strong>, so they remain even after refreshing the page.
+      </p>
+
+      <h2>Technologies used</h2>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript (localStorage)</li>
+      </ul>
+
+      <h2>Preview</h2>
+      <img src="image/project2.jpg" alt="Prayer Request App" class="project-image">
+
+      <h2>Links</h2>
+      <p>
+        <a href="index.html">Back to portfolio</a> |
+        <a href="https://ouma-illah4.github.io/my-portfolio" target="_blank">Live site</a> |
+        <a href="https://github.com/ouma-illah4/my-portfolio" target="_blank">GitHub Repo</a>
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&COPY; 2025 My Portfolio | All Rights Reserved</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="project2.js"></script>
+</body>
+</html>
+
